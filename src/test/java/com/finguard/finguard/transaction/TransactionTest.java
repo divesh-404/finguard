@@ -80,4 +80,10 @@ class TransactionTest {
         List<Transaction> result = scorer.filterHighValueTransactions(transactions, threshold);
         assertEquals(0, result.size());
     }
+
+    @Test
+    @DisplayName("FraudScorer has default threshold of 10000")
+    void testDefaultThresholdValue() {
+        assertEquals(new BigDecimal("10000"), FraudScorer.DEFAULT_THRESHOLD);
+    }
 }
