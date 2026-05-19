@@ -11,6 +11,7 @@ public class Transaction {
     private String locationCity;
     private TransactionType type;
 
+
     public Transaction(String txnId, String userId, BigDecimal amount, LocalDateTime timestamp, String locationCity,
             TransactionType type) {
 
@@ -26,7 +27,10 @@ public class Transaction {
                 this.timestamp = timestamp;
                 this.locationCity = locationCity;
                 this.type = type;
+
     }
+
+
 
     public String getTxnId() {
         return txnId;
